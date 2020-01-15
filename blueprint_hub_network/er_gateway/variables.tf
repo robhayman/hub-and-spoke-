@@ -22,7 +22,7 @@ variable "connection_name" {
   
 }
 
-variable "public_ip_addr" {
+variable "er_ip_addr_config" {
   
 }
 

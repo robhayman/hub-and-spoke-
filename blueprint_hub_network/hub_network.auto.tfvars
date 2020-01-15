@@ -141,10 +141,10 @@ fw_ip_addr_config = {
 provision_gateway = false
 gateway_config  = {
     gateway_type                 = "ExpressRoute" 
-    vpn_gateway_name             = "er_gw_uks_hub_dev"
+    er_gateway_name             = "er_gw_uks_hub_dev"
     active_active                = false
     enable_bgp                   = true 
-    vpn_gateway_sku              = "ErGw1az"
+    er_gateway_sku              = "ErGw1az"
     diagnostics = {
         log = [
                     #["Category name",  "Diagnostics Enabled(true/false)", "Retention Enabled(true/false)", Retention_period] 
