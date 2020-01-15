@@ -16,9 +16,10 @@ module "resource_groups" {
 ######################
 
 locals {
-  HUB-NET-RG = lookup(module.resource_groups.names, "hub_network", null)
-  HUB-NET-LOCATION = lookup(module.resource_groups.location, "hub_network", null))
+  HUB-NET-RG = lookup(module.resource_groups.names.hub_network, "name", null)
+  HUB-NET-LOCATION = lookup(module.resource_groups.names.hub_network, "location", null )
 }
+
 
 
 #######################

@@ -11,7 +11,7 @@ provider "azurerm" {
 # backend 
 ###################################
 
-terraform {
-    backend "azurerm" {
-    }
-}
+#terraform {
+#    backend "azurerm" {
+#    }
+#}
