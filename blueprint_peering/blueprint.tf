@@ -21,7 +21,7 @@ resource "azurerm_virtual_network_peering" "peering_spoke_to_hub" {
  # depends_on                    = [ module.networking_transit_vnet ]
   
   name                          = "spoke_to_hub"
-  resource_group_name           = #local.HUB-NET-TRANSIT
+  resource_group_name           = var.re
   virtual_network_name          = #module.networking_transit_vnet.vnet_obj.name
   remote_virtual_network_id     = #var.shared_services_vnet_object.vnet_id
   allow_virtual_network_access  = true
