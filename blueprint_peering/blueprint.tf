@@ -1,6 +1,6 @@
 
 provider "azurerm" {
-    alias = "hubsubscription"
+    alias = "remotesubscription"
     subscription_id = #"pull from output of remote network module"
 }
 
