@@ -3,17 +3,12 @@
 ########################
 
 ## Resource groups
-resource_groups = {
-    hub_network          = { 
-                    name     = "rguksdevinfra"
+shared_Services_network_resource_groups = {
+    shared_services_network          = { 
+                    name     = "rguksdevssinfra"
                     location = "uksouth" 
     },
-    palo_alto            = {    
-                    name     = "rguksdevpalo"
-                    location = "uksouth" 
-    }
-       
-}
+   
 
 
 #######################
@@ -30,21 +25,15 @@ location    = "uksouth"
 
 # networking variables
 
-hub_networking_object = {
+shared_services_network_object = {
         vnet = {
             name                = "sg1-vnet-dmz"
-            address_space       = ["10.101.4.0/22"]     # 10.100.4.0 - 10.100.7.255
+            address_space       = ["10.101.4.0/22"]    
             dns                 = ["192.168.0.16", "192.168.0.64"]
             enable_ddos_std     = true
             ddos_id             = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/testrg/providers/Microsoft.Network/ddosProtectionPlans/myddos"
 
         }
-        specialsubnets     = {
-                AzureFirewallSubnet = {
-                name                = "AzureFirewallSubnet"
-                cidr                = "10.101.4.0/25"
-               }
-            }
         subnets = {
             Subnet_1        = {
                 name                = "Active_Directory"

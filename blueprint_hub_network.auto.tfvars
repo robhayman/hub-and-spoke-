@@ -8,10 +8,6 @@ resource_groups = {
                     name     = "rguksdevinfra"
                     location = "uksouth"
     },
-    palo_alto            = {    
-                    name     = "rguksdevpalo"
-                    location = "uksouth"
-    }
        
 }
 
