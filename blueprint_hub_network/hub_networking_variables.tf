@@ -30,22 +30,6 @@ variable "hub_networking_object" {
   description = "(Required) configuration object describing the networking configuration, as described in README"
 }
 
-
-# public IP variable firewall
-
-
-variable "fw_ip_addr_config" {
-  description = "IP address configuration object"
-}
-
-# Azure Firewall Variables
-
-
-variable "az_fw_config" {
-  description = "(Required) configuration object for Azure Firewall to be created"
-}
-
-
 # diagnostics variables
 
 variable "diagnostics_map" {
