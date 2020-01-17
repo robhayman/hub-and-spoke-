@@ -149,7 +149,7 @@ remote_network_connect = true
 remote_network = {
     gateway_name = "onprem_gw"
     gateway_ip = "1.2.3.4"
-    gateway_adress_space = ["1.0.0.0/8"]
+    gateway_address_space = ["1.0.0.0/8"]
 }
 
 

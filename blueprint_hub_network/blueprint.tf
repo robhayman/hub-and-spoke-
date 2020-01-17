@@ -16,8 +16,8 @@ module "hub_resource_groups" {
 ######################
 
 locals {
-  HUB-NET-RG = module.hub_resource_groups.names.shared_services_network
-  HUB-NET-LOCATION = module.hub_resource_groups.object.shared_services_network.location
+  HUB-NET-RG = module.hub_resource_groups.names.hub_network
+  HUB-NET-LOCATION = module.hub_resource_groups.object.hub_network.location
 }
 
 
@@ -64,20 +64,20 @@ module "ER_gateway" {
 }
 
 
-# #####################
-# # Public IP gateway
-# ######################
+#####################
+# Public IP gateway
+######################
 
-# module "networking_hub_gateway_public_ip" {
-#   source  = "aztfmod/caf-public-ip/azurerm"
-#   version = "0.1.3"
+module "networking_hub_gateway_public_ip" {
+  source  = "aztfmod/caf-public-ip/azurerm"
+  version = "0.1.3"
 
-#   name                             = var.er_ip_addr_config.name
-#   location                         = local.HUB-NET-LOCATION
-#   rg                               = local.HUB-NET-RG
-#   ip_addr                          = var.er_ip_addr_config
-#   tags                             = var.tags
-#   diagnostics_map                  = var.diagnostics_map
-#   log_analytics_workspace_id       = var.log_analytics_workspace.id
-#   diagnostics_settings             = var.er_ip_addr_config.diagnostics
-# }
+  name                             = var.er_ip_addr_config.name
+  location                         = local.HUB-NET-LOCATION
+  rg                               = local.HUB-NET-RG
+  ip_addr                          = var.er_ip_addr_config
+  tags                             = var.tags
+  diagnostics_map                  = var.diagnostics_map
+  log_analytics_workspace_id       = var.log_analytics_workspace.id
+  diagnostics_settings             = var.er_ip_addr_config.diagnostics
+}
