@@ -7,7 +7,7 @@ module "hub_resource_groups" {
     version = "0.1.1"
     
     prefix                  = var.prefix
-    resource_groups         = var.resource_groups
+    resource_groups         = var.hub_resource_groups
     tags                    = var.tags
 }
 
@@ -16,8 +16,8 @@ module "hub_resource_groups" {
 ######################
 
 locals {
-  SHARED-SERVICES-NET-RG = module.hub_resource_groups.names.shared_services_network
-  SHARED-SERVICES-NET-LOCATION = module.hub_resource_groups.object.shared_services_network.location
+  HUB-NET-RG = module.hub_resource_groups.names.shared_services_network
+  HUB-NET-LOCATION = module.hub_resource_groups.object.shared_services_network.location
 }
 
 
