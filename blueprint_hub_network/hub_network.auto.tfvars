@@ -94,63 +94,63 @@ hub_networking_object = {
         }
 }
 
-# ######################
-# # GATEWAY VARIABLES
-# ######################
+######################
+# GATEWAY VARIABLES
+######################
 
-# # Gateway Variables
+# Gateway Variables
 
-# provision_gateway = false
-# gateway_config  = {
-#     gateway_type                 = "ExpressRoute" 
-#     er_gateway_name             = "er_gw_uks_hub_dev"
-#     active_active                = false
-#     enable_bgp                   = true 
-#     er_gateway_sku              = "ErGw1az"
-#     diagnostics = {
-#         log = [
-#                     #["Category name",  "Diagnostics Enabled(true/false)", "Retention Enabled(true/false)", Retention_period] 
-#                     ["GatewayDiagnosticLog", true, true, 30],
-#                     ["TunnelDiagnosticLog", true, true, 30],
-#                     ["RouteDiagnosticLog", true, true, 30],
-#                     ["IKEDiagnosticLog", true, true, 30],
-#                     ["P2SDiagnosticLog", true, true, 30],
-#             ]
-#         metric = [
-#                 ["AllMetrics", true, true, 30],
-#         ]
-#     }
-# }
+provision_gateway = false
+gateway_config  = {
+    gateway_type                 = "ExpressRoute" 
+    er_gateway_name             = "er_gw_uks_hub_dev"
+    active_active                = false
+    enable_bgp                   = true 
+    er_gateway_sku              = "ErGw1az"
+    diagnostics = {
+        log = [
+                    #["Category name",  "Diagnostics Enabled(true/false)", "Retention Enabled(true/false)", Retention_period] 
+                    ["GatewayDiagnosticLog", true, true, 30],
+                    ["TunnelDiagnosticLog", true, true, 30],
+                    ["RouteDiagnosticLog", true, true, 30],
+                    ["IKEDiagnosticLog", true, true, 30],
+                    ["P2SDiagnosticLog", true, true, 30],
+            ]
+        metric = [
+                ["AllMetrics", true, true, 30],
+        ]
+    }
+}
 
-# # Gateway IP 
+# Gateway IP 
 
-# er_ip_addr_config = {
-#     name   = "pip_er_gw_uks_hub_dev"
-#     allocation_method = "Dynamic"
-#     sku               = "standard"
-#     diagnostics = {
-#         log = [
-#                     #["Category name",  "Diagnostics Enabled(true/false)", "Retention Enabled(true/false)", Retention_period] 
-#                     ["DDoSProtectionNotifications", true, true, 30],
-#                     ["DDoSMitigationFlowLogs", true, true, 30],
-#                     ["DDoSMitigationReports", true, true, 30],
-#             ]
-#         metric = [
-#                 ["AllMetrics", true, true, 30],
-#         ]
-#     }
-# }
+er_ip_addr_config = {
+    name   = "pip_er_gw_uks_hub_dev"
+    allocation_method = "Dynamic"
+    sku               = "standard"
+    diagnostics = {
+        log = [
+                    #["Category name",  "Diagnostics Enabled(true/false)", "Retention Enabled(true/false)", Retention_period] 
+                    ["DDoSProtectionNotifications", true, true, 30],
+                    ["DDoSMitigationFlowLogs", true, true, 30],
+                    ["DDoSMitigationReports", true, true, 30],
+            ]
+        metric = [
+                ["AllMetrics", true, true, 30],
+        ]
+    }
+}
 
-# # Connection
+# Connection
 
-# connection_name = "con_er_uks_dev_onprem"
-# remote_network_connect = true
+connection_name = "con_er_uks_dev_onprem"
+remote_network_connect = true
 
-# remote_network = {
-#     gateway_name = "onprem_gw"
-#     gateway_ip = "1.2.3.4"
-#     gateway_adress_space = ["1.0.0.0/8"]
-# }
+remote_network = {
+    gateway_name = "onprem_gw"
+    gateway_ip = "1.2.3.4"
+    gateway_adress_space = ["1.0.0.0/8"]
+}
 
 
 ###################################

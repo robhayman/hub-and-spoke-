@@ -59,30 +59,30 @@ variable "prefix" {
 
 }
 
-# #  ER Gateway Variables
+#  ER Gateway Variables
 
-# variable "er_ip_addr_config" {
-#   description = "(Required) IP address configuration object"
-# }
+variable "er_ip_addr_config" {
+  description = "(Required) IP address configuration object"
+}
 
-# variable "gateway_config" {
-#   description = "(Required) configuration object of network gateway to be created"
-# }
+variable "gateway_config" {
+  description = "(Required) configuration object of network gateway to be created"
+}
 
-# variable "remote_network" {
-#   description = "Map of the remote network configuration"
-# }
+variable "remote_network" {
+  description = "Map of the remote network configuration"
+}
 
-# variable "remote_network_connect" {
-#   description = "Determines if the Remote Network is to be connected after creation."
-#   type = bool
-# }
+variable "remote_network_connect" {
+  description = "Determines if the Remote Network is to be connected after creation."
+  type = bool
+}
 
-# variable "connection_name" {
-#   description = "Name of the connection to the remote site."
-# }
+variable "connection_name" {
+  description = "Name of the connection to the remote site."
+}
 
-# variable "provision_gateway" {
+variable "provision_gateway" {
   
-# }
+}
 
