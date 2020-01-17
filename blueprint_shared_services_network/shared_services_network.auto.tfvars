@@ -3,11 +3,12 @@
 ########################
 
 ## Resource groups
-shared_Services_network_resource_groups = {
+shared_services_resource_groups = {
     shared_services_network          = { 
                     name     = "rguksdevssinfra"
                     location = "uksouth" 
-    },
+    }
+    }
    
 
 
@@ -25,15 +26,22 @@ location    = "uksouth"
 
 # networking variables
 
-shared_services_network_object = {
+shared_services_network = {
         vnet = {
             name                = "sg1-vnet-dmz"
-            address_space       = ["10.101.4.0/22"]    
+            address_space       = ["10.101.4.0/16"]    
             dns                 = ["192.168.0.16", "192.168.0.64"]
             enable_ddos_std     = true
             ddos_id             = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/testrg/providers/Microsoft.Network/ddosProtectionPlans/myddos"
 
         }
+         specialsubnets     = {
+                GatewaySubnet           = {
+                name                = "GatewaySubnet" 
+                cidr                = "10.101.253.0.0/24"
+                service_endpoints   = []
+            }
+            }
         subnets = {
             Subnet_1        = {
                 name                = "Active_Directory"
@@ -106,5 +114,4 @@ log_analytics_workspace = {
 tags    = {
                      project     = "Core Networking "
                      environment     = "Development"
-                    }
-
+}

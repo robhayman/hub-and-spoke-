@@ -2,13 +2,13 @@
 # Variables Resource Group
 ##########################
 
-variable "resource_groups" {
+variable "shared_services_resource_groups" {
   description = "(Required) Map of the resource groups to create"
 }
 
 
 #######################
-# Variables Hub Network
+# Variables Shared services Network
 ######################
 
 # rg variables
@@ -28,7 +28,7 @@ variable "location" {
 
 # vnet variables 
 
-variable "hub_networking_object" {
+variable "shared_services_network" {
   description = "(Required) configuration object describing the networking configuration, as described in README"
 }
 

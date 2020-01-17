@@ -1,7 +1,7 @@
-output "Shared_services_network_vnet_object" {
-  value = module.shared_services_virtual_network.vnet
+output "shared_services_network" {
+  value = module.shared_services_network.vnet
 }
 
-output "Shared_services_resource_Groups" {
-  value = module.resource_groups
+output "shared_services_resource_groups" {
+  value = module.shared_services_resource_groups
 }

@@ -2,12 +2,12 @@
 # Resource Group modules
 ########################
 
-module "resource_groups" {
+module "shared_services_resource_groups" {
     source  = "aztfmod/caf-resource-group/azurerm"
     version = "0.1.1"
     
     prefix                  = var.prefix
-    resource_groups         = var.shared_Services_network_resource_groups
+    resource_groups         = var.shared_services_resource_groups
     tags                    = var.tags
 }
 
@@ -16,8 +16,8 @@ module "resource_groups" {
 ######################
 
 locals {
-  SHARED-SERVICES-NET-RG = lookup(module.resource_groups.names.shared_services_network, "name", null)
-  SHARED-SERVICES-NET-LOCATION = lookup(module.resource_groups.names.shared_services_network, "location", null )
+  SHARED-SERVICES-NET-RG = lookup(module.shared_services_resource_groups.names.shared_services_network, "name", null)
+  SHARED-SERVICES-NET-LOCATION = lookup(module.shared_services_resource_groups.names.shared_services_network, "location", null )
 }
 
 
@@ -26,13 +26,13 @@ locals {
 # Network Module
 #######################
 
-module "shared_services_virtual_network" {
+module "shared_services_network" {
     source  = "aztfmod/caf-virtual-network/azurerm"
     version = "0.2.0"
 
     virtual_network_rg                = local.SHARED-SERVICES-NET-RG
     location                          = local.SHARED-SERVICES-NET-LOCATION
-    networking_object                 = var.shared_services_network_object
+    networking_object                 = var.shared_services_network
     tags                              = var.tags
     diagnostics_map                   = var.diagnostics_map
     diagnostics_settings              = var.diagnostics_settings
