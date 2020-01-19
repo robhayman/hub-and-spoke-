@@ -47,7 +47,7 @@ hub_networking_object = {
                }
                 GatewaySubnet           = {
                 name                = "GatewaySubnet" 
-                cidr                = "10.0.253.0.0/24"
+                cidr                = "10.0.253.0/24"
                 service_endpoints   = []
             }
             }
