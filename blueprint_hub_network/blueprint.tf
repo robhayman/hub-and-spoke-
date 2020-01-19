@@ -60,7 +60,7 @@ module "ER_gateway" {
   diagnostics_map                     = var.diagnostics_map
   log_analytics_workspace             = var.log_analytics_workspace
   diagnostics_settings                = var.gateway_config.diagnostics
-  er_ip_addr_config                   = var.er_ip_addr_config
+  er_ip_addr_config                   = module.networking_hub_gateway_public_ip.id
 }
 
 
