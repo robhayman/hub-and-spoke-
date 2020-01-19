@@ -16,8 +16,8 @@ module "shared_services_resource_groups" {
 ######################
 
 locals {
-  SHARED-SERVICES-NET-RG = lookup(tomap(module.shared_services_resource_groups.names.shared_services_network), "name", null)
-  SHARED-SERVICES-NET-LOCATION = lookup(tomap(module.shared_services_resource_groups.names.shared_services_network), "location", null )
+  SHARED-SERVICES-NET-RG = module.shared_services_resource_groups.names.hub_network
+  SHARED-SERVICES-LOCATION = module.shared_services_resource_groups.object.hub_network.location
 }
 
 
