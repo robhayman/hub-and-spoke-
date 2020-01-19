@@ -36,7 +36,7 @@ hub_networking_object = {
             name                = "sg1-vnet-dmz"
             address_space       = ["10.0.0.0/8"]     # 10.100.4.0 - 10.100.7.255
             dns                 = ["192.168.0.16", "192.168.0.64"]
-            enable_ddos_std     = true
+            enable_ddos_std     = false
             ddos_id             = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/testrg/providers/Microsoft.Network/ddosProtectionPlans/myddos"
 
         }
