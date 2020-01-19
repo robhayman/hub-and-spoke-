@@ -19,7 +19,7 @@ resource "azurerm_virtual_network_gateway" "er_gateway" {
 
   ip_configuration {
     name                          = "vnetGatewayConfig"
-    public_ip_address_id          = var.er_ip_addr_config
+    public_ip_address_id          = var.er_ip_addr_config.public_ip.id
     private_ip_address_allocation = "Dynamic"
     subnet_id                     = var.gateway_subnet
   }
