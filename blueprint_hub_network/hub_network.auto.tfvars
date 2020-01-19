@@ -126,7 +126,7 @@ gateway_config  = {
 
 er_ip_addr_config = {
     name   = "pip_er_gw_uks_hub_dev"
-    allocation_method = "Dynamic"
+    allocation_method = "static"
     sku               = "standard"
     diagnostics = {
         log = [
@@ -160,8 +160,8 @@ remote_network = {
 # diagnostics variables
 
 diagnostics_map = {
-      diags_sa      = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/operations-rg/providers/Microsoft.Storage/storageAccounts/opslogs"
-      eh_id         = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/operations-rg/providers/Microsoft.EventHub/namespaces/sharkeys"
+      diags_sa      = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/rguksloganalytics/providers/Microsoft.Storage/storageAccounts/sharkeysopslogs"
+      eh_id         = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/rguksloganalytics/providers/Microsoft.EventHub/namespaces/sharkeys"
       eh_name       = "sharkeys"
   }
 
@@ -179,7 +179,7 @@ diagnostics_settings = {
 #log analytics variables
 
 log_analytics_workspace = {
-        id = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourcegroups/operations-rg/providers/microsoft.operationalinsights/workspaces/sharkeyterraform"
+        id = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/rguksloganalytics/providers/microsoft.operationalinsights/workspaces/sharkeyterraform"
         name = "sharkeyterraform"
   }
 
