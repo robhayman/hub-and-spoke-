@@ -16,8 +16,8 @@ module "shared_services_resource_groups" {
 ######################
 
 locals {
-  SHARED-SERVICES-NET-RG = module.shared_services_resource_groups.names.hub_network
-  SHARED-SERVICES-NET-LOCATION = module.shared_services_resource_groups.object.hub_network.location
+  SHARED-SERVICES-NET-RG = module.shared_services_resource_groups.names.shared_services_network_network
+  SHARED-SERVICES-NET-LOCATION = module.shared_services_resource_groups.object.shared_services_network_network.location
 }
 
 

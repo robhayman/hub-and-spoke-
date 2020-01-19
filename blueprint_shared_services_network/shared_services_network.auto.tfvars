@@ -5,7 +5,7 @@
 ## Resource groups
 shared_services_resource_groups = {
     shared_services_network          = { 
-                    name     = "rguksdevssinfra"
+                    name     = "rguksdevssinfrashared"
                     location = "uksouth" 
     }
     }
@@ -18,7 +18,7 @@ shared_services_resource_groups = {
 
 # rg variables
 
-virtual_network_rg = "rguksdevinfra"
+virtual_network_rg = "rguksdevinfrashared"
 
 # location
 
