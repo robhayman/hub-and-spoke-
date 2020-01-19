@@ -126,7 +126,7 @@ gateway_config  = {
 
 er_ip_addr_config = {
     name   = "pip_er_gw_uks_hub_dev"
-    allocation_method = "Static Dynamic"
+    allocation_method = "Static"
     sku               = "standard"
     diagnostics = {
         log = [
