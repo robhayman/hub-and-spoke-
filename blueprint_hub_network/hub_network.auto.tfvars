@@ -160,7 +160,7 @@ remote_network = {
 # diagnostics variables
 
 diagnostics_map = {
-      diags_sa      = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/rguksloganalytics/providers/Microsoft.Storage/storageAccounts/sharkeysopslogs"
+      diags_sa      = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/rguksloganalytics/providers/Microsoft.Storage/storageAccounts/sharkeysopslogs2"
       eh_id         = "/subscriptions/fa357408-7eec-4476-84e9-ace688dc1f6c/resourceGroups/rguksloganalytics/providers/Microsoft.EventHub/namespaces/sharkeys"
       eh_name       = "sharkeys"
   }
