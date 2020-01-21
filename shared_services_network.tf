@@ -19,7 +19,7 @@ log_analytics_workspace         = var.log_analytics_workspace
 diagnostics_settings            = var.diagnostics_settings  
 
 # Tags variables    
-tags   
+#tags   
 
 
 #module "blueprint_peering" {

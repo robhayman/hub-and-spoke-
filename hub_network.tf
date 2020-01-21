@@ -4,7 +4,7 @@ module "blueprint_hub_network" {
 
 # Resource groups variables
 
-resource_groups                 = var.resource_groups
+resource_groups                 = var.hub_resource_groups
 location                        = var.location
 
 # Network variables 
@@ -14,8 +14,8 @@ hub_networking_object           = var.hub_networking_object
 
 # firewall variables 
 
-az_fw_config                    = var.az_fw_config_object
-fw_ip_addr_config               = var.fw_ip_addr_config
+#az_fw_config                    = var.az_fw_config_object
+#fw_ip_addr_config               = var.fw_ip_addr_config
 
 # gateway variables 
 

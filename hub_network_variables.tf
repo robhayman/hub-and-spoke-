@@ -18,15 +18,15 @@ variable "hub_networking_object" {
   description = "(Required) Name of the resource group where to create the vnet" 
 }
 
-# Firewall variables
+# # Firewall variables
 
-variable "az_fw_config" {
-  description = "(Required) Name of the resource group where to create the vnet" 
-}
+# variable "az_fw_config" {
+#   description = "(Required) Name of the resource group where to create the vnet" 
+# }
 
-variable "fw_ip_addr_config" {
-  description = "(Required) Name of the resource group where to create the vnet" 
-}
+# variable "fw_ip_addr_config" {
+#   description = "(Required) Name of the resource group where to create the vnet" 
+# }
 
 # Gateway variables
 
