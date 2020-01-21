@@ -2,12 +2,12 @@
 # Resource Group modules
 ########################
 
-module "couk_resource_groups" {
+module "spoke_resource_groups" {
     source  = "aztfmod/caf-resource-group/azurerm"
     version = "0.1.1"
     
     prefix                  = var.prefix
-    resource_groups         = var.couk_resource_groups
+    resource_groups         = var.spoke_resource_groups
     tags                    = var.tags
 }
 
@@ -16,8 +16,8 @@ module "couk_resource_groups" {
 ######################
 
 locals {
-  COUK-NET-RG = module.couk_resource_groups.names.couk_network
-  COUK-NET-LOCATION = module.couk_resource_groups.object.couk_network.location
+  spoke-NET-RG = module.spoke_resource_groups.names.spoke_network
+  spoke-NET-LOCATION = module.spoke_resource_groups.object.spoke_network.location
 }
 
 
@@ -26,13 +26,13 @@ locals {
 # Network Module
 #######################
 
-module "couk_network" {
+module "spoke_network" {
     source  = "aztfmod/caf-virtual-network/azurerm"
     version = "0.2.0"
 
-    virtual_network_rg                = local.COUK-NET-RG
-    location                          = local.COUK-NET-LOCATION
-    networking_object                 = var.couk_network
+    virtual_network_rg                = local.spoke-NET-RG
+    location                          = local.spoke-NET-LOCATION
+    networking_object                 = var.spoke_network
     tags                              = var.tags
     diagnostics_map                   = var.diagnostics_map
     diagnostics_settings              = var.diagnostics_settings

@@ -2,7 +2,7 @@
 # Variables Resource Group
 ##########################
 
-variable "couk_resource_groups" {
+variable "spoke_resource_groups" {
   description = "(Required) Map of the resource groups to create"
 }
 
@@ -28,7 +28,7 @@ variable "location" {
 
 # vnet variables 
 
-variable "couk_network" {
+variable "spoke_network" {
   description = "(Required) configuration object describing the networking configuration, as described in README"
 }
 
